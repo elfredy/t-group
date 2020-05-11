@@ -1,0 +1,96 @@
+.pageHeader {
+    background-color: transparent;
+    height: 42.5rem;
+    position: relative;
+
+    &__logo{
+        width: 12rem;
+    }
+
+    &__navList{
+        padding-left: 6rem;
+    }
+    &__nav {
+        padding: 2rem 10rem;
+        z-index: 3;
+
+
+        @include respondmax(sm) {
+            display: none;
+        }
+
+        .nav-item {
+            min-width: 10rem;
+            text-align: center;
+            margin-left: 1rem;
+
+            @include respondmax(xl) {
+                min-width: 8.5rem;
+            }
+            @include respondmax(lg) {
+                min-width: 7rem;
+            }
+        }
+        .nav-link {
+            @include font($rbmdm, 1.6rem, $color-white);
+
+            @include respondmax(xl) {
+                font-size: 1.4rem;
+            }
+
+            @include respondmax(md) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 42.5rem;
+        z-index: 1;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__overlay{
+        position: absolute;
+        width: 100%;
+        height: 42.5rem;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba($color-pink-light,.12);
+    }
+
+    &__titleGroup{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 3;
+
+        & p{
+            @include font($rbmdm,2.3rem,$color-white);
+            text-align: center;
+
+            max-width: 47rem;
+            max-height: 7rem;
+            overflow: hidden;
+            
+        }
+    }
+
+
+    &__title{
+        @include font($rbbld,4.7rem,$color-white);
+        text-align: center;
+    }
+
+}

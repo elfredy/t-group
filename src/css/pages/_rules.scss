@@ -1,0 +1,98 @@
+.rules {
+    padding: 5rem 10rem;
+    overflow: hidden;
+    position: relative;
+    &__title {
+        @include font($sfpbld, 2.8rem, $color-yellow-light);
+    }
+
+    &__content {
+        max-width: 73rem;
+        margin-top: 3rem;
+        & h2 {
+            @include font($sfpmd, 2.4rem, $color-grey-dark);
+            margin-bottom: 1rem;
+        }
+
+        & p {
+            @include font($sfpmd, 1.6rem, $color-grey-dark);
+        }
+    }
+
+    input[type="checkbox"] + label {
+        display: block;
+        margin: 0.2em;
+        cursor: pointer;
+        padding: 0.2em;
+        @include font($rbmdm,2rem);
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label:before {
+        content: "\2714";
+        border: 0.1em solid rgba($color-grey-dark, 0.4);
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+       line-height: 1;
+
+        margin-right: 2rem;
+        vertical-align: bottom;
+        color: transparent;
+        transition: 0.2s;
+    }
+
+    input[type="checkbox"] + label:active:before {
+        transform: scale(0);
+    }
+
+    input[type="checkbox"]:checked + label:before {
+        background-color: MediumSeaGreen;
+        border-color: MediumSeaGreen;
+        color: #fff;
+    }
+
+    input[type="checkbox"]:disabled + label:before {
+        transform: scale(1);
+        border-color: #aaa;
+    }
+
+    input[type="checkbox"]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: #bfb;
+        border-color: #bfb;
+    }
+
+    &__send {
+        width: 15.6rem;
+        @include font($rbbld, 2rem, $color-grey-dark);
+        text-align: center;
+        padding: 1rem 0;
+        outline: none;
+        border: 1.3px solid rgba($color-grey-dark, 0.4);
+        background-color: rgba($color-grey-dark, 0.2);
+        border-radius: 0.6rem;
+        margin-top: 3rem;
+
+        &:hover{
+            border-color: $color-green;
+            background-color: $color-green;
+            color: $color-white;
+        }
+        
+        &:active,&:focus{
+            outline: none;
+        }
+    }
+
+    &__circles {
+        position: absolute;
+        top: -6rem;
+        overflow: hidden;
+        right: 10rem;
+    }
+}

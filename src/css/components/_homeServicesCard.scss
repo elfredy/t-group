@@ -1,0 +1,55 @@
+.homeServicesCard {
+    display: block;
+    height: 28rem;
+    width: 25rem;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: all .3s;
+    &__img {
+        width: 11.4rem;
+        height: 11.4rem;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 2.5rem;
+        & img{
+            width: 6rem;
+        }
+    }
+
+    & span{
+        @include font($rbrgl,2rem,$color-grey-dark);
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:hover,&:active,&:focus{
+        text-decoration: none;
+        box-shadow: 0 .7rem 3rem -4px rgba($color-shadow,.2);
+        transform: translateY(-5px);
+    }
+
+
+    .cardWeddingImg {
+        background-color: $color-pink-light;
+    }
+
+    .carBirthdayImg{
+        background-color: $color-green;
+    }
+
+    .cardEventImg{
+        background-color: $color-yellow-light;
+    }
+
+    .cardEngagementImg{
+        background-color: $color-purple;
+    }
+}

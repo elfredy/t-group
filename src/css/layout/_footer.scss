@@ -1,0 +1,50 @@
+.footer{
+    padding: 3rem 10rem;
+    padding-bottom: 0;
+    
+    &__bottom{
+        padding: 2rem 0;
+    }
+
+    & p{
+        @include font($rbrgl,1.4rem,$color-black);
+    }
+
+    &__sosialLink{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        color: rgba($color-grey-dark,.6);
+        border: 1px solid  rgba($color-grey-dark,.6);
+        display: inline-block;
+        position: relative;
+        transition: all .3s ease-out;
+        background-color: $color-white;
+        
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+        
+
+        & .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 1.6rem;    
+            transition: all .3s;
+            color: rgba($color-grey-dark,.6);
+        }
+
+        &:hover{
+            border: 1px solid  $color-green;
+            background-color: $color-green;
+            color: $color-white;
+            transform: rotate(360deg);
+
+            & .icon{
+                color: $color-white;
+            }
+        }
+    }
+}

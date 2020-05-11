@@ -1,0 +1,32 @@
+.homePortfolio {
+    padding: 5rem 0;
+
+    &__title {
+        @include font($rbmdm, 4.8rem, $color-grey-dark);
+        text-align: center;
+    }
+
+    & p {
+        @include font($rbrgl, 2rem, $color-grey-dark);
+        margin: 2rem auto;
+        max-width: 47.6rem;
+        max-height: 7rem;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    &__cards {
+        margin-top: 5rem;
+    }
+
+    &__link {
+        width: 15.6rem;
+        padding: 1.6rem 0;
+        border-radius: 0.6rem;
+        text-align: center;
+        margin-top: 2rem;
+        display: block;
+        margin: 0 auto;
+        margin-top: 8rem;
+    }
+}

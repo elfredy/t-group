@@ -1,0 +1,42 @@
+.serviceCard {
+    display: block;
+    width: 27rem;
+    height: 43rem;
+    margin: 0 auto;
+    margin-top: 8rem;
+    transition: all 0.3s;
+    box-shadow: 0 0.7rem 3rem -4px transparent;
+    position: relative;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__titles {
+        width: 23rem;
+        height: 7.6rem;
+        position: absolute;
+        bottom: -3rem;
+        left: 1rem;
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        background-color: $color-white;
+        transition: all 0.3s;
+
+        & h3 {
+            @include font($rbrgl, 1.6rem, $color-grey-dark);
+        }
+        & span {
+            @include font($rbrgl, 1.4rem, rgba($color-grey-dark, 0.4));
+            margin-top: 1rem;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+        box-shadow: 0 3rem 3rem -4px rgba($color-shadow, 0.2);
+        transform: translateY(-8px);
+    }
+}

@@ -1,0 +1,39 @@
+.birdhtdayLink{
+    @include font($rbbld,2rem,$color-green);
+    background-color: rgba($color-green,.3);
+
+    &:hover{
+        color: $color-green;
+        text-decoration: none;
+    }
+}
+
+.weddingLink{
+    @include font($rbbld,2rem,$color-pink-light);
+    background-color: rgba($color-pink-light,.3);
+
+    &:hover{
+        color: $color-pink-light;
+        text-decoration: none;
+    }
+}
+
+.eventLink{
+    @include font($rbbld,2rem,$color-yellow-light);
+    background-color: rgba($color-yellow-light,.3);
+
+    &:hover{
+        color: $color-yellow-light;
+        text-decoration: none;
+    }
+}
+
+.engagamentLink{
+    @include font($rbbld,2rem,$color-purple);
+    background-color: rgba($color-purple,.3);
+
+    &:hover{
+        color: $color-purple;
+        text-decoration: none;
+    }
+}

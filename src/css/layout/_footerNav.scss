@@ -1,0 +1,18 @@
+.footerNav{
+    border-bottom: 2px solid $color-grey-light;
+    
+
+    &__logo{
+        width: 7rem;
+        height: 12rem;
+    }
+    .nav-link{
+        @include font($rbmdm, 1.6rem, $color-black);
+        margin-left: 4rem;
+    }
+
+
+    &__number{
+        @include font($rbrgl,1.4rem,$color-black)
+    }
+}

@@ -1,0 +1,167 @@
+.homeAbout {
+    width: 100%;
+    height: 80rem;
+    padding: 20rem 10rem;
+    background-color: $color-grey-light;
+
+    @include respondmax(xl) {
+        padding: 10rem 8.5rem;
+        height: 60rem;
+    }
+
+    @include respondmax(lg){
+        padding: 8rem 6rem;
+    }
+
+    @include respondmax(md){
+        height: 70rem;
+        padding: 5rem 6rem;
+    }
+
+    @include respondmax(sm){
+        padding: 2rem 3.5rem;
+        height: 63rem;
+    }
+
+    &__left {
+        width: 44rem;
+        padding: 2rem 0;
+
+        
+        @include respondmax(xl) {
+            width: 40rem;
+            
+        }
+
+        @include respondmax(lg) {
+            width: 30rem;
+            
+        }
+
+        @include respondmax(md){
+            width: 100%;
+            padding: 1rem 0;
+        }
+
+        & p {
+            @include font($rbrgl, 2rem, $color-grey-dark);
+            margin: 2rem 0;
+            max-height: 14rem;
+            overflow: hidden;
+
+            @include respondmax(lg){
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__title {
+        @include font($rbmdm, 4rem, $color-grey-dark);
+
+        @include respondmax(lg){
+            font-size: 3rem;
+        }
+    }
+
+    &__readMore {
+        display: inline-block;
+        @include font($rbbld, 2.3rem, $color-pink-dark);
+        width: 18.2rem;
+        border-radius: 0.7rem;
+        text-align: center;
+        padding: 2rem 0;
+        background-color: rgba($color-pink-dark, 0.4);
+        margin-top: 3rem;
+
+        @include respondmax(lg){
+            font-size: 1.8rem;
+            width: 15rem;
+        }
+
+        @include respondmax(sm){
+            font-size: 1.6rem;
+            padding: 1.5rem 0;
+            width: 13rem;
+            margin-top: 1rem;
+        }
+        &:hover {
+            text-decoration: none;
+            color: $color-pink-dark;
+        }
+    }
+
+    &__right {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        @include respondmax(md){
+            height: 40rem;
+        }
+
+        @include respondmax(sm){
+            height: 36rem;
+        }
+    }
+
+    &__video {
+        height: 45rem;
+        width: 67rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        @include respondmax(xl) {
+            width: 44rem;
+            height: 35rem;
+        }
+
+        @include respondmax(lg) {
+            width: 35rem;
+            height: 27rem;
+        }
+
+        @include respondmax(md){
+            width: 100%;
+
+        }
+    }
+
+    &__rightBack {
+        width: 50rem;
+        height: 55rem;
+        background-color: rgba($color-yellow-light, 0.2);
+        border-radius: 10rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-25deg);
+
+        z-index: 1;
+
+        @include respondmax(xl) {
+            width: 35rem;
+            height: 40rem;
+        }
+
+
+        
+        @include respondmax(lg) {
+            width: 30rem;
+            height: 35rem;
+        }
+
+        @include respondmax(md){
+            height: 30rem;
+            border-radius: 5rem;
+        }
+
+        @include respondmax(sm){
+            width: 22rem;
+            height: 27rem;
+            border-radius: 3rem;
+        }
+    }
+}

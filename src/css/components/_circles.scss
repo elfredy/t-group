@@ -1,0 +1,43 @@
+.smCircle {
+    width: 14.4rem;
+    height: 14.4rem;
+    border-radius: 50%;
+    margin: 0 0.25rem;
+
+    @include respondmax(xl) {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    @include respondmax(sm) {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+.bigCircle {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    margin: 0 0.25rem;
+}
+
+.purpleCircle {
+    background-color: $color-purple;
+    opacity: .7;
+}
+
+.yellowCircle {
+    background-color: $color-yellow-light;
+    opacity: .5;
+}
+
+.pinkCircle {
+    background-color: $color-pink-light;
+    opacity: .5;
+}
+
+.darkblueCircle{
+    background-color: $color-blue-dark;
+    opacity: .5;
+}

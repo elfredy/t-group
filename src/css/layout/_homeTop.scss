@@ -1,0 +1,159 @@
+.homeTop {
+    height: 80rem;
+
+    @include respondmax(xl){
+        height: 60rem;
+    }
+
+    @include respondmax(md){
+        height: 90rem;
+    }
+
+    @include respondmax(sm){
+        height: 80rem;
+    }
+
+    &__right {
+        width: 100%;
+        height: 80rem;
+        @include respondmax(xl){
+            height: 60rem;
+        }
+
+        @include respondmax(md){
+            height: 30rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__left {
+        padding-left: 10rem;
+        width: 100%;
+        position: relative;
+        height: 80rem;
+        background-color: $color-white;
+
+        @include respondmax(xl){
+            height: 60rem;
+            padding-left: 8.5rem;
+        }
+
+        @include respondmax(lg){
+            padding-left: 6rem;
+        }
+
+        @include respondmax(sm){
+            padding-left: 3.5rem;
+            height: 50rem;
+        }
+
+        & p {
+            @include font($rbmdm, 2rem, $color-grey-dark);
+            opacity: 0.7;
+            max-width: 40rem;
+            overflow: hidden;
+            max-height: 15rem;
+            margin: 3rem 0;
+        }
+    }
+    &__center {
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        @include font($rbbld, 3.6rem, $color-grey-dark);
+        margin: 1rem 0;
+
+        @include respondmax(lg){
+            font-size: 2.4rem;
+        }
+    }
+
+    &__linkGroup {
+        display: flex;
+        margin-top: 4rem;
+    }
+
+    &__order {
+        @include font($rbbld, 2rem, $color-white);
+        text-decoration: none;
+        width: 15.6rem;
+        padding: 1.6rem 0;
+        text-align: center;
+        background-color: $color-green;
+        border-radius: 0.7rem;
+        border: 1px solid $color-green;
+
+        @include respondmax(lg){
+            font-size: 1.8rem;
+            padding: 1.3rem 0;
+            width: 13rem;
+        }
+
+        @include respondmax(sm){
+            font-size: 1.5rem;
+            width: 9rem;
+            padding: 1.5rem 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+
+    &__watch {
+        @include font($rbbld, 2rem, $color-grey-dark);
+        width: 20.3rem;
+        text-align: center;
+        padding: 1.6rem 0;
+        border: 1px solid $color-grey-dark;
+        border-radius: 0.6rem;
+        margin-left: 3rem;
+
+        @include respondmax(lg){
+            font-size: 1.8rem;
+            padding: 1.3rem 0;
+            width: 16rem;
+        }
+
+        @include respondmax(sm){
+            font-size: 1.5rem;
+            width: 13rem;
+            
+        }
+
+        & img{
+            transition: all .5s;
+        }
+        &:hover {
+            text-decoration: none;
+            color: $color-grey-dark;
+
+            & img{
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &__circles{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: -8rem;
+        overflow: hidden;
+
+        @include respondmax(sm){
+            left: -5rem;
+        }
+
+    }
+}

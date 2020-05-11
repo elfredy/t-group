@@ -1,0 +1,61 @@
+.homePortfolioCard {
+    display: block;
+    width: 36rem;
+    height: 47rem;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0em 3rem -4px rgba($color-shadow, 0.2);
+    border-radius: 0.4rem;
+    transition: all .3s;
+
+    &:hover{
+        text-decoration: none;
+        transform: translateY(-8px);
+        box-shadow: 0 1rem 2rem 5px rgba($color-shadow,.2);
+
+        .homePortfolioCard__arrow{
+            left: 20.5rem;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 27rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+    }
+
+    &__title{
+        @include font($rbrgl,2rem,$color-grey-dark);
+        position: absolute;
+        bottom: 10rem;
+        left: 3.5rem;
+        max-width: 22rem;
+        max-height: 5rem;
+        overflow: hidden;
+    }
+
+    &__arrow{
+        width: 4.6rem;
+        height: 2.6rem;
+        position: absolute;
+        bottom: 4rem;
+        left: 3.5rem;
+        transition: all .3s ease-out;
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+   
+}

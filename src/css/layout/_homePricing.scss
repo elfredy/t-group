@@ -1,0 +1,28 @@
+.homePricing {
+    padding: 5rem 20rem;
+    position: relative;
+    overflow: hidden;
+    height: 100rem;
+    &__title {
+        @include font($rbmdm, 4.8rem, $color-grey-dark);
+        text-align: center;
+    }
+
+    &__cards {
+        margin-top: 8rem;
+        z-index: 2;
+    }
+
+    &__back {
+        position: absolute;
+        background-image: url('../../img/pricingback.png');
+        opacity: .11;
+        width: 90rem;
+        height: 85rem;
+        left: -5rem;
+        top: 3rem;
+        background-color: rgba($color-yellow-light,.1);
+        z-index: 1;
+        background-size: contain;
+    }
+}

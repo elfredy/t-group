@@ -1,0 +1,30 @@
+.myNav {
+    padding: 0;
+    @include respondmax(sm) {
+        display: none;
+    }
+
+    .nav-item {
+        min-width: 10rem;
+        text-align: center;
+        margin-left: 1rem;
+
+        @include respondmax(xl) {
+            min-width: 8.5rem;
+        }
+        @include respondmax(lg){
+            min-width: 7rem;
+        }
+    }
+    .nav-link {
+        @include font($rbmdm, 1.6rem, $color-black);
+
+        @include respondmax(xl) {
+            font-size: 1.4rem;
+        }
+
+        @include respondmax(md) {
+            font-size: 1.3rem;
+        }
+    }
+}
