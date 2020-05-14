@@ -1,31 +1,48 @@
 .contact{
     width: 100%;
-
+    position: relative;
+    z-index: 3;
     &__left{
         padding: 5rem 10rem;
         height: 80rem;
         width: 50%;
         float: left;
+        position: relative;
+
+        @include respondmax(sm){
+            width: 100%;
+            padding: 0 1rem ;
+            float: none;
+        }
     }
 
     &__right{
         width: 50%;
         height: 80rem;
         float: right;
-
+        position: relative;
         & img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @include respondmax(sm){
+            display: none;
         }
     }
 
     &__title{
         @include font($rbrgl,3.6rem,$color-grey-dark);
         margin: 1rem 0;
+
+        @include respondmax(sm){
+            font-size: 2.4rem;
+            margin: 2rem 0;
+        }
     }
 
-    & input,textarea{
+    &__input,&__textarea{
         width: 100%;
         height: 5.2rem;
         border-radius: .6rem;
@@ -37,7 +54,10 @@
 
     & label{
         @include font($rbmdm,2rem,$color-grey-dark);
-
+        
+        @include respondmax(sm){
+            font-size: 1.6rem;
+        }
        
     }
 
@@ -46,8 +66,12 @@
         font-size: 2rem;
     }
 
-    & textarea{
+    &__textarea{
         height: 20rem;
+
+        @include respondmax(sm){
+            height: 17rem;
+        }
     }
 
     input[type="checkbox"] + label {
@@ -56,6 +80,10 @@
         cursor: pointer;
         
         @include font($rbmdm,2rem);
+
+        @include respondmax(sm){
+            font-size: 1.2rem;
+        }
     }
 
     input[type="checkbox"] {
@@ -77,6 +105,11 @@
         vertical-align: bottom;
         color: transparent;
         transition: 0.2s;
+
+        @include respondmax(sm){
+            padding-left: 2px;
+            padding-top: 0;
+        }
     }
 
     input[type="checkbox"] + label:active:before {
@@ -119,6 +152,17 @@
 
         &:active,&:focus{
             outline: none;
+        }
+    }
+
+    &__circles{
+        display: none;
+
+        @include respondmax(sm){
+            position: absolute;
+            left: -3rem;
+            bottom: 0;
+            display: flex;
         }
     }
 }

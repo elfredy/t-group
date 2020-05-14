@@ -2,6 +2,12 @@
     padding: 5rem 10rem;
     overflow: hidden;
     position: relative;
+
+    @include respondmax(sm){
+        padding: 2rem;
+
+        padding-bottom: 10rem;
+    }
     &__title {
         @include font($sfpbld, 2.8rem, $color-yellow-light);
     }
@@ -12,6 +18,10 @@
         & h2 {
             @include font($sfpmd, 2.4rem, $color-grey-dark);
             margin-bottom: 1rem;
+
+            @include respondmax(sm){
+                font-size: 2rem;
+            }
         }
 
         & p {
@@ -65,7 +75,7 @@
         transform: scale(1);
         background-color: #bfb;
         border-color: #bfb;
-    }
+    } 
 
     &__send {
         width: 15.6rem;
@@ -77,6 +87,12 @@
         background-color: rgba($color-grey-dark, 0.2);
         border-radius: 0.6rem;
         margin-top: 3rem;
+
+        @include respondmax(sm){
+            font-size: 1.6rem;
+            padding: .8rem 0;
+            margin-top: 2rem;
+        }
 
         &:hover{
             border-color: $color-green;
@@ -91,8 +107,19 @@
 
     &__circles {
         position: absolute;
-        top: -6rem;
+        
         overflow: hidden;
-        right: 10rem;
+        display: block;
+
+        @include respondmin(sm){
+            top: -6rem;
+            right: 10rem;
+        }
+
+        @include respondmax(sm){
+            bottom: 0;
+            left: -3rem;
+            display: flex;
+        }
     }
 }

@@ -1,0 +1,29 @@
+.servicesMobilCard{
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    align-items: center;
+    
+    
+    @include font($rbmdm,2rem,$color-white);
+
+    & img{
+        width: 4rem;
+        margin: 0 4rem;
+    }
+    &__wedding{
+        background-color: $color-pink-light;
+    }
+
+    &__birthday{
+        background-color: $color-green;
+    }
+
+    &__event{
+        background-color: $color-yellow-light;
+    }
+
+    &__engagement{
+        background-color: $color-purple;
+    }
+}

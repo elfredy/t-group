@@ -9,6 +9,11 @@ $(document).ready(function(){
         $("#"+tab_id).addClass('current');
         
         e.preventDefault();
+	});
+	
+
+	$('.services__mobilopen').click(function(){
+		$(this).toggleClass('openMenu');
 	})
 
 });

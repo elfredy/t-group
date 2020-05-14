@@ -19,13 +19,14 @@
     }
 
     @include respondmax(sm){
-        padding: 2rem 3.5rem;
-        height: 63rem;
+        padding: 2rem 0;
+        height: 59rem;
+        background-color: $color-white;
     }
 
     &__left {
         width: 44rem;
-        padding: 2rem 0;
+        padding: 2rem;
 
         
         @include respondmax(xl) {
@@ -81,7 +82,7 @@
         @include respondmax(sm){
             font-size: 1.6rem;
             padding: 1.5rem 0;
-            width: 13rem;
+            width: 15rem;
             margin-top: 1rem;
         }
         &:hover {

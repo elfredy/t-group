@@ -2,10 +2,21 @@
     padding:  5rem 10rem;
     padding-bottom: 25rem;
     position: relative;
+    overflow: hidden;
+
+    @include respondmax(sm){
+        padding: 3rem ;
+        background-color: $color-grey-light;
+    }
 
     &__title {
         @include font($rbbld, 3.6rem, $color-grey-dark);
         text-align: center;
+
+        @include respondmax(sm){
+            font-size: 2rem;
+            padding: 0 4rem;
+        }
     }
 
     & p {
@@ -13,6 +24,11 @@
         text-align: center;
 
         margin-top: 3rem;
+
+        @include respondmax(sm){
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
     }
 
     &__link {
@@ -29,6 +45,13 @@
             color: $color-white;
             text-decoration: none;
         }
+
+        @include respondmax(sm){
+            width: 12.4rem;
+            margin-top: 3rem;
+            font-size: 1.6rem;
+            
+        }
     }
 
     &__circles {
@@ -36,5 +59,9 @@
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @include respondmax(sm){
+            display: none;
+        }
     }
 }

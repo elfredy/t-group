@@ -3,6 +3,10 @@
     height: 42.5rem;
     position: relative;
 
+    @include respondmax(sm){
+        height: 29rem;
+    }
+
     &__logo{
         width: 12rem;
     }
@@ -57,6 +61,11 @@
             height: 100%;
             object-fit: cover;
         }
+
+        @include respondmax(sm){
+            height: 21rem;
+            top: 8rem;
+        }
     }
 
     &__overlay{
@@ -67,6 +76,11 @@
         left: 0;
         z-index: 2;
         background-color: rgba($color-pink-light,.12);
+
+        @include respondmax(sm){
+            height: 21rem;
+            top: 8rem;
+        }
     }
 
     &__titleGroup{
@@ -76,6 +90,10 @@
         transform: translate(-50%,-50%);
         z-index: 3;
 
+        @include respondmax(sm){
+            top: 60%;
+        }
+
         & p{
             @include font($rbmdm,2.3rem,$color-white);
             text-align: center;
@@ -83,6 +101,10 @@
             max-width: 47rem;
             max-height: 7rem;
             overflow: hidden;
+
+            @include respondmax(sm){
+                font-size: 1.6rem;
+            }
             
         }
     }
@@ -91,6 +113,18 @@
     &__title{
         @include font($rbbld,4.7rem,$color-white);
         text-align: center;
+
+        @include respondmax(sm){
+            font-size: 2.8rem;
+        }
+    }
+
+    & .content{
+        left: 0;
+    }
+    & .button{
+        top: 0;
+        right: 0;
     }
 
 }

@@ -1,6 +1,8 @@
 .footerNav{
     border-bottom: 2px solid $color-grey-light;
-    
+    @include respondmax(sm){
+        display: none;
+    }
 
     &__logo{
         width: 7rem;
@@ -13,6 +15,17 @@
 
 
     &__number{
-        @include font($rbrgl,1.4rem,$color-black)
+        @include font($rbrgl,1.4rem,$color-black);
+
+        &--1{
+            display: none;
+            @include font($rbrgl,1.4rem,$color-black);
+            
+            @include respondmax(sm){
+                display: block;
+                text-align: center;
+                margin-top: 5rem;
+            }
+        }
     }
 }

@@ -1,65 +1,182 @@
-.services{
+.services {
     padding: 0 10rem;
-   
+
+    @include respondmax(sm) {
+        padding: 0;
+        padding-bottom: 13rem;
+    }
+
     position: relative;
-    &__title{
-        @include font($rbrgl,3.7rem,$color-grey-dark);
+    &__title {
+        @include font($rbrgl, 3.7rem, $color-grey-dark);
         margin-top: 6rem;
 
-        &:after{
-            content: '';
+        @include respondmax(sm) {
+            display: none;
+        }
+
+        &:after {
+            content: "";
             display: block;
             width: 4.2rem;
-            height: .4rem;
+            height: 0.4rem;
             background-color: $color-green;
             margin: 4rem 0;
         }
     }
 
-    &__list{
+    &__list {
         list-style: none;
         padding: 0;
-        
-    }
-
-    &__item{
-        display: block;
-    }
-    
-    &__link{
-        @include font($rbrgl,2rem,$color-grey-dark);
-        margin-top: .5rem;
-        display: inline-block;
-        padding-bottom: 1rem;
-
-        &:hover{
-            text-decoration: none;
-           color: $color-grey-dark;
+        @include respondmax(sm) {
+            display: none;
         }
     }
 
-    &__cards{
-       padding-bottom: 7rem;
+    &__mobileMenu {
+        display: none;
+
+        @include respondmax(sm) {
+            display: block;
+            position: relative;
+            box-shadow: 0 0 1rem -4px rgba($color-grey-dark,.3);
+        }
     }
 
-    &__pagination{
+    &__mobilopen {
+        @include font($rbmdm, 2rem, $color-grey-dark);
+       
+        display: block;
+        width: 100%;
+        z-index: 3;
+        padding: 2rem 0;
+        padding-left: 2rem;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-grey-dark;
+            text-decoration: none;
+        }
+
+        &:after {
+            content: "\f077";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 1rem;
+            transition: all 0.3s;
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+    }
+
+    .openMenu {
+        &:after {
+            content: "\f077";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 1rem;
+            transition: all 0.3s;
+            transform: rotate(0);
+            display: inline-block;
+        }
+    }
+
+    &__Mobilist {
+        padding-left: 2rem;
+    }
+
+    &__collapse {
+        position: absolute;
+        width: 100%;
+        background-color: $color-white;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__link {
+        @include font($rbrgl, 2rem, $color-grey-dark);
+        margin-top: 0.5rem;
+        display: inline-block;
+        padding-bottom: 1rem;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-grey-dark;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__cards {
+        padding-bottom: 7rem;
+    }
+
+    &__pagination {
         display: flex;
         list-style: none;
         position: absolute;
         right: 0;
         bottom: 0;
 
-        & a{
-            @include font($rbrgl,1.6rem,$color-grey-dark);
-            margin: 0 .5rem;
+        @include respondmax(sm){
+            display: none;
         }
 
-        & img{
+        & a {
+            @include font($rbrgl, 1.6rem, $color-grey-dark);
+            margin: 0 0.5rem;
+        }
+
+        & img {
             width: 3rem;
         }
 
-        & .active{
+        & .active {
             color: $color-pink-light;
+        }
+    }
+
+    &__circles{
+        display: none;
+        z-index: 1;
+        @include respondmax(sm){
+            display: block;
+            position: absolute;
+            right: 0;
+            top: -3rem;
+        }
+    }
+
+    &__readMore{
+        width: 15.6rem;
+        padding: 1.6rem 0;
+        border-radius: 0.6rem;
+        text-align: center;
+        margin: 0 auto;
+       
+        display: none;
+
+        @include respondmax(sm){
+            display: block;
+           
+        }
+    }
+
+
+    &__bottomCircles{
+        display: none;
+
+        @include respondmax(sm){
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: -4rem;        
         }
     }
 }

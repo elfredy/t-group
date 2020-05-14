@@ -9,6 +9,12 @@
     border-top: 6px solid $color-green;
     transition: all .3s;
     z-index: 2;
+
+    @include respondmax(sm){
+        width: 100%;
+
+    }
+
     &__top{
         position: absolute;
         top: 0;
@@ -24,15 +30,25 @@
             text-align: center;
         }
     }
+    
 
     &__number1{
         @include font($rbmdm,5rem,$color-pink-light);
         display: inline-block;
         margin-top: 5rem;
+
+        @include respondmax(sm){
+            font-size: 4.6rem;
+        }
+
     }
     &__number2{
         @include font($rbmdm,1.8rem,$color-pink-light);
         display: inline-block;
+
+        @include respondmax(sm){
+            font-size: 1.5rem;
+        }
     }
 
     &__center{

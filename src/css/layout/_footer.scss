@@ -1,6 +1,11 @@
 .footer{
     padding: 3rem 10rem;
     padding-bottom: 0;
+    position: relative;
+
+    @include respondmax(sm){
+        padding: 3rem 2rem;
+    }
     
     &__bottom{
         padding: 2rem 0;
@@ -8,6 +13,20 @@
 
     & p{
         @include font($rbrgl,1.4rem,$color-black);
+
+        @include respondmax(sm){
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+    }
+    
+    &__sosial{
+        @include respondmax(sm){
+            position: absolute;
+            top: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__sosialLink{
@@ -45,6 +64,32 @@
             & .icon{
                 color: $color-white;
             }
+        }
+    }
+
+    &__mobilMenu{
+        display: none;
+
+        text-align: center;
+        
+        @include respondmax(sm){
+            display: block;
+            
+        }
+
+        & a{
+            text-decoration: none;
+            @include font($rbmdm,1.2rem, $color-grey-dark);
+        }
+    }
+
+    & .footerMobilLogo{
+        display: none;
+        width: 8rem;
+        @include respondmax(sm){
+            display: block;
+            margin: 0  auto;
+            margin-top: 3.5rem;
         }
     }
 }

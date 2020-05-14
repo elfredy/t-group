@@ -3,7 +3,7 @@
 <main class="homePage">
     <section class="homeTop">
         <div class="row m-0">
-            <div class="col-md-7 p-0">
+            <div class="col-md-7 homeTop__leftCol p-0">
                 <div class="homeTop__left">
                     <div class="homeTop__center">
                         <h1 class="homeTop__title">
@@ -30,9 +30,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 p-0">
+            <div class="col-md-5 homeTop__rightCol p-0">
                 <div class="homeTop__right">
-                    <img src="img/homeTopimg.png" alt="" class="homeTop__img">
+                    <div class="headerCarousel owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="img/homeTopimg.png" alt="" class="homeTop__img">
+                        </div>
+                        <div class="item">
+                            <img src="img/homeTopimg.png" alt="" class="homeTop__img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,6 +134,24 @@
             </div>
         </div>
 
+        <div class="homeServices__mobilCards">
+            <a href="#" class="servicesMobilCard servicesMobilCard__wedding">
+                <img src="img/wedding.png" alt="">
+                Wedding
+            </a>
+            <a href="#" class="servicesMobilCard servicesMobilCard__birthday">
+                <img src="img/birdhtday.png" alt="">
+                Birthday
+            </a>
+            <a href="#" class="servicesMobilCard servicesMobilCard__event">
+                <img src="img/event.png" alt="">
+                Event
+            </a>
+            <a href="#" class="servicesMobilCard servicesMobilCard__engagement">
+                <img src="img/engegament.png" alt="">
+                Engagement
+            </a>
+        </div>
         <div class="homeServices__content">
 
             <div class="serviceContent current" id="tab-1">
@@ -304,8 +329,10 @@
             Pricing
         </h2>
         <div class="homePricing__cards">
-            <div class="row m-0">
-                <div class="col-md-4 p-0">
+
+            <div class="pricingCarousel owl-carousel owl-theme">
+                <div class="item">
+
                     <a href="#" class="homePricingCard">
                         <div class="homePricingCard__top">
                             <h3 class="homePricingCard__number1">
@@ -340,8 +367,10 @@
                             </span>
                         </div>
                     </a>
+
                 </div>
-                <div class="col-md-4 p-0">
+                <div class="item">
+
                     <a href="#" class="homePricingCard">
                         <div class="homePricingCard__top">
                             <h3 class="homePricingCard__number1">
@@ -376,8 +405,10 @@
                             </span>
                         </div>
                     </a>
+
                 </div>
-                <div class="col-md-4 p-0">
+                <div class="item">
+
                     <a href="#" class="homePricingCard">
                         <div class="homePricingCard__top">
                             <h3 class="homePricingCard__number1">
@@ -412,8 +443,10 @@
                             </span>
                         </div>
                     </a>
+
                 </div>
             </div>
+
 
         </div>
         <div class="homePricing__back"></div>
