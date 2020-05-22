@@ -1,12 +1,17 @@
 .serviceCard {
     display: block;
-    width: 27rem;
-    height: 43rem;
+    width: 36rem;
+    height: 54rem;
     margin: 0 auto;
     margin-top: 8rem;
     transition: all 0.3s;
  
     position: relative;
+
+    @include respondmax(xxl){
+        width: 26rem;
+        height: 40rem;
+    }
 
     @include respondmax(sm){
         width: 100%;
@@ -40,10 +45,10 @@
         }
 
         & h3 {
-            @include font($rbrgl, 1.6rem, $color-grey-dark);
+            @include font($sfprgl, 2rem, $color-grey-dark);
         }
         & span {
-            @include font($rbrgl, 1.4rem, rgba($color-grey-dark, 0.4));
+            @include font($sfprgl, 1.6rem, rgba($color-grey-dark, 0.4));
             margin-top: 1rem;
         }
     }

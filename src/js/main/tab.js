@@ -14,6 +14,19 @@ $(document).ready(function(){
 
 	$('.services__mobilopen').click(function(){
 		$(this).toggleClass('openMenu');
+
+	})
+
+	$('.langDropdown__firstLink').click(function(){
+		$(this).toggleClass('openMenu');
+		
+	})
+
+
+
+	$('.labelCheckbox').click(function(){
+		$('.contact__send').toggleClass('contactChecked');
+		
 	})
 
 });

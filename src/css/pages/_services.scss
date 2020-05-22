@@ -8,7 +8,7 @@
 
     position: relative;
     &__title {
-        @include font($rbrgl, 3.7rem, $color-grey-dark);
+        @include font($sfpbld, 3.6rem, $color-grey-dark);
         margin-top: 6rem;
 
         @include respondmax(sm) {
@@ -44,7 +44,7 @@
     }
 
     &__mobilopen {
-        @include font($rbmdm, 2rem, $color-grey-dark);
+        @include font($sfprgl, 2rem, $color-grey-dark);
        
         display: block;
         width: 100%;
@@ -114,14 +114,14 @@
     }
 
     &__cards {
-        padding-bottom: 7rem;
+        padding-bottom: 15rem;
     }
 
     &__pagination {
         display: flex;
         list-style: none;
         position: absolute;
-        right: 0;
+        right: 6.5rem;
         bottom: 0;
 
         @include respondmax(sm){
@@ -129,7 +129,7 @@
         }
 
         & a {
-            @include font($rbrgl, 1.6rem, $color-grey-dark);
+            @include font($sfprgl, 2rem, $color-grey-dark);
             margin: 0 0.5rem;
         }
 

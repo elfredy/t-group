@@ -4,12 +4,17 @@
     padding: 20rem 10rem;
     background-color: $color-grey-light;
 
+    @include respondmax(xxl){
+        padding: 15rem 8rem;
+        height: 60rem;
+    }
+
     @include respondmax(xl) {
         padding: 10rem 8.5rem;
         height: 60rem;
     }
 
-    @include respondmax(lg){
+    @include respondmax(lg){ 
         padding: 8rem 6rem;
     }
 
@@ -25,9 +30,10 @@
     }
 
     &__left {
-        width: 44rem;
         padding: 2rem;
-
+        @include respondmax(xxl){
+            padding: 1rem;
+        }
         
         @include respondmax(xl) {
             width: 40rem;
@@ -45,10 +51,15 @@
         }
 
         & p {
-            @include font($rbrgl, 2rem, $color-grey-dark);
+            @include font($sfprgl, 2.4rem, $color-grey-dark);
             margin: 2rem 0;
-            max-height: 14rem;
+            max-height: 18rem;
             overflow: hidden;
+            max-width: 64rem;
+
+            @include respondmax(xxl){
+                font-size: 1.6rem;
+            }
 
             @include respondmax(lg){
                 font-size: 1.4rem;
@@ -57,7 +68,11 @@
     }
 
     &__title {
-        @include font($rbmdm, 4rem, $color-grey-dark);
+        @include font($sfpbld, 4.8rem, $color-grey-dark);
+
+        @include respondmax(xxl){
+            font-size: 3.6rem;
+        }
 
         @include respondmax(lg){
             font-size: 3rem;
@@ -67,12 +82,19 @@
     &__readMore {
         display: inline-block;
         @include font($rbbld, 2.3rem, $color-pink-dark);
-        width: 18.2rem;
+        width: 15.6rem;
         border-radius: 0.7rem;
         text-align: center;
-        padding: 2rem 0;
+        height: 5.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: rgba($color-pink-dark, 0.4);
         margin-top: 3rem;
+
+        @include respondmax(xxl){
+            font-size: 2rem;
+        }
 
         @include respondmax(lg){
             font-size: 1.8rem;
@@ -81,7 +103,7 @@
 
         @include respondmax(sm){
             font-size: 1.6rem;
-            padding: 1.5rem 0;
+           
             width: 15rem;
             margin-top: 1rem;
         }
@@ -114,6 +136,11 @@
         transform: translate(-50%, -50%);
         z-index: 2;
 
+        @include respondmax(xxl){
+            height: 40rem;
+            width: 55rem;
+        }
+
         @include respondmax(xl) {
             width: 44rem;
             height: 35rem;
@@ -141,6 +168,11 @@
         transform: translate(-50%, -50%) rotate(-25deg);
 
         z-index: 1;
+
+        @include respondmax(xxl){
+            height: 45rem;
+            width: 45rem;
+        }
 
         @include respondmax(xl) {
             width: 35rem;

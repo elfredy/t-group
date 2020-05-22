@@ -1,15 +1,21 @@
 .homeServicesCard {
     display: block;
-    height: 28rem;
-    width: 25rem;
+    height: 32.2rem;
+    width: 30.6rem;
     display: block;
     text-align: center;
     margin: 0 auto;
     padding: 1rem;
-    transition: all .3s;
+    transition: all 0.3s;
+
+    @include respondmax(xxl) {
+        height: 25rem;
+        width: 25rem;
+    }
+
     &__img {
-        width: 11.4rem;
-        height: 11.4rem;
+        width: 12.2rem;
+        height: 12.2rem;
         border-radius: 50%;
         margin: 0 auto;
         display: flex;
@@ -17,39 +23,54 @@
         align-items: center;
         position: relative;
         top: 2.5rem;
-        & img{
+
+        @include respondmax(xxl){
+            width: 9rem;
+            height: 9rem;
+        }
+
+        & img {
             width: 6rem;
+
+            @include respondmax(xxl){
+                width: 5rem;
+            }
         }
     }
 
-    & span{
-        @include font($rbrgl,2rem,$color-grey-dark);
+    & span {
+        @include font($sfprgl, 2.8rem, $color-grey-dark);
         position: absolute;
-        bottom: 1rem;
+        top: 60%;
         left: 50%;
         transform: translateX(-50%);
+
+        @include respondmax(xxl){
+            font-size: 2rem;
+        }
     }
 
-    &:hover,&:active,&:focus{
+    &:hover,
+    &:active,
+    &:focus {
         text-decoration: none;
-        box-shadow: 0 .7rem 3rem -4px rgba($color-shadow,.2);
+        box-shadow: 0 0.7rem 3rem -4px rgba($color-shadow, 0.2);
         transform: translateY(-5px);
     }
-
 
     .cardWeddingImg {
         background-color: $color-pink-light;
     }
 
-    .carBirthdayImg{
+    .carBirthdayImg {
         background-color: $color-green;
     }
 
-    .cardEventImg{
+    .cardEventImg {
         background-color: $color-yellow-light;
     }
 
-    .cardEngagementImg{
+    .cardEngagementImg {
         background-color: $color-purple;
     }
 }

@@ -17,7 +17,11 @@
         }
     }
     .nav-link {
-        @include font($rbmdm, 1.6rem, $color-black);
+        @include font($sfpmd, 2rem, $color-grey-dark);
+
+        @include respondmax(xxl){
+            font-size: 1.6rem;
+        }
 
         @include respondmax(xl) {
             font-size: 1.4rem;

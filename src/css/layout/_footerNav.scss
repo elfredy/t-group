@@ -9,17 +9,17 @@
         height: 12rem;
     }
     .nav-link{
-        @include font($rbmdm, 1.6rem, $color-black);
+        @include font($sfprgl, 2rem, $color-grey-dark);
         margin-left: 4rem;
     }
 
 
     &__number{
-        @include font($rbrgl,1.4rem,$color-black);
+        @include font($sfprgl, 2rem, $color-grey-dark);
 
         &--1{
             display: none;
-            @include font($rbrgl,1.4rem,$color-black);
+            @include font($rbrgl,1.4rem,$color-grey-dark);
             
             @include respondmax(sm){
                 display: block;

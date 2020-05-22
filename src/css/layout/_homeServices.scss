@@ -2,8 +2,12 @@
     padding: 6rem 0;
     background-color: $color-white;
     position: relative;
-    height: 150rem;
+    height: 140rem;
     overflow: hidden;
+
+    @include respondmax(xxl){
+        height: 127rem;
+    }
 
     @include respondmax(sm){
         padding: 1rem 0;
@@ -14,6 +18,10 @@
         @include font($rbmdm,4.8rem,$color-grey-dark);
         text-align: center;
         margin-bottom: 1rem;
+
+        @include respondmax(xxl){
+            font-size: 3.6rem;
+        }
 
         @include respondmax(sm){
             font-size: 2.4rem;
@@ -31,6 +39,10 @@
         overflow: hidden;
         text-align: center;
 
+        @include respondmax(xxl){
+            font-size: 1.6rem;
+        }
+
         @include respondmax(sm){
             font-size: 1.2rem;
             padding-left: 2rem;
@@ -41,8 +53,8 @@
     }
 
     &__cards{
-        margin-top: 4rem;
-        padding: 10rem 0;
+    
+        padding: 4rem 0;
 
         @include respondmax(sm){
             display: none;
@@ -53,12 +65,17 @@
         background-image: url('../../img/contentback.png');
         background-size: cover;
         width: 100rem;
-        height: 55rem;
-        left: -12.5rem;
+        height: 59rem;
+        left: -13rem;
         overflow: hidden;
         position: relative;
-        box-shadow: -30px 26px 30px -17px  rgba($color-shadow,.3); 
+        
         z-index: 2;
+
+        @include respondmax(xxl){
+            width: 83rem;
+            height: 54rem;
+        }
 
         @include respondmax(sm){
             display: none;
@@ -73,10 +90,12 @@
         background-image: linear-gradient(to top right, #ECF7FC, #fff  60%, #fff);
         position: absolute;
         left: 7rem;
-        bottom: 5rem;
+        bottom: 11rem;
         overflow: hidden;
         z-index: 1;
         transform: rotate(-8deg);
+
+      
 
         @include respondmax(sm){
             display: none;

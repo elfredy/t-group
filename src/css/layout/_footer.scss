@@ -3,6 +3,10 @@
     padding-bottom: 0;
     position: relative;
 
+    @include respondmax(xxl){
+        padding: 3rem 8rem;     
+    }
+
     @include respondmax(sm){
         padding: 3rem 2rem;
     }
@@ -12,7 +16,7 @@
     }
 
     & p{
-        @include font($rbrgl,1.4rem,$color-black);
+        @include font($sfprgl,2rem,$color-grey-dark);
 
         @include respondmax(sm){
             margin: 0 auto;

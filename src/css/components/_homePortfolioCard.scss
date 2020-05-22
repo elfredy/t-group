@@ -1,12 +1,17 @@
 .homePortfolioCard {
     display: block;
-    width: 36rem;
-    height: 47rem;
+    width: 51rem;
+    height: 67rem;
     margin: 0 auto;
     position: relative;
     box-shadow: 0 0em 3rem -4px rgba($color-shadow, 0.2);
     border-radius: 0.4rem;
     transition: all .3s;
+
+    @include respondmax(xxl){
+        width: 30rem;
+        height: 46rem;
+    }
 
     @include respondmax(sm){
         width: 100%;
@@ -20,14 +25,18 @@
         box-shadow: 0 1rem 2rem 5px rgba($color-shadow,.2);
 
         .homePortfolioCard__arrow{
-            left: 20.5rem;
+            left: 60%;
         }
     }
 
     &__img {
         position: absolute;
         width: 100%;
-        height: 27rem;
+        height: 41rem;
+
+        @include respondmax(xxl){
+            height: 30rem;
+        }
 
         & img {
             width: 100%;
@@ -43,13 +52,17 @@
     }
 
     &__title{
-        @include font($rbrgl,2rem,$color-grey-dark);
+        @include font($sfprgl,2.8rem,$color-grey-dark);
         position: absolute;
         bottom: 10rem;
         left: 3.5rem;
-        max-width: 22rem;
+        max-width: 100%;
         max-height: 5rem;
         overflow: hidden;
+
+        @include respondmax(xxl){
+           font-size: 2rem;
+        }
 
         @include respondmax(sm){
             bottom: 3rem;

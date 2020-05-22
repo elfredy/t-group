@@ -3,21 +3,20 @@
     height: 42.5rem;
     position: relative;
 
-    @include respondmax(sm){
+    @include respondmax(sm) {
         height: 29rem;
     }
 
-    &__logo{
+    &__logo {
         width: 12rem;
     }
 
-    &__navList{
-        padding-left: 6rem;
+    &__navList {
+        padding-right: 10rem;
     }
     &__nav {
         padding: 2rem 10rem;
         z-index: 3;
-
 
         @include respondmax(sm) {
             display: none;
@@ -36,7 +35,7 @@
             }
         }
         .nav-link {
-            @include font($rbmdm, 1.6rem, $color-white);
+            @include font($sfpmd, 2rem, $color-white);
 
             @include respondmax(xl) {
                 font-size: 1.4rem;
@@ -48,83 +47,89 @@
         }
     }
 
-
-    &__img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+    &__img {
+        //position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
         height: 42.5rem;
         z-index: 1;
-        & img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
-        @include respondmax(sm){
+        @include respondmax(sm) {
             height: 21rem;
             top: 8rem;
         }
+
+        .pagesCarousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 42.5rem;
+            z-index: 1;
+
+            & img{
+                width: 100%;
+                height: 42.5rem;
+                object-fit: cover;
+            }
+        }
     }
 
-    &__overlay{
+    &__overlay {
         position: absolute;
         width: 100%;
         height: 42.5rem;
         top: 0;
         left: 0;
         z-index: 2;
-        background-color: rgba($color-pink-light,.12);
+        background-color: rgba($color-pink-light, 0.12);
 
-        @include respondmax(sm){
+        @include respondmax(sm) {
             height: 21rem;
             top: 8rem;
         }
     }
 
-    &__titleGroup{
+    &__titleGroup {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         z-index: 3;
 
-        @include respondmax(sm){
+        @include respondmax(sm) {
             top: 60%;
         }
 
-        & p{
-            @include font($rbmdm,2.3rem,$color-white);
+        & p {
+            @include font($rbmdm, 2.3rem, $color-white);
             text-align: center;
 
             max-width: 47rem;
             max-height: 7rem;
             overflow: hidden;
 
-            @include respondmax(sm){
+            @include respondmax(sm) {
                 font-size: 1.6rem;
             }
-            
         }
     }
 
-
-    &__title{
-        @include font($rbbld,4.7rem,$color-white);
+    &__title {
+        @include font($rbbld, 4.7rem, $color-white);
         text-align: center;
 
-        @include respondmax(sm){
+        @include respondmax(sm) {
             font-size: 2.8rem;
         }
     }
 
-    & .content{
+    & .content {
         left: 0;
     }
-    & .button{
+    & .button {
         top: 0;
         right: 0;
     }
-
 }

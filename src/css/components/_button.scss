@@ -1,5 +1,5 @@
 .birdhtdayLink{
-    @include font($rbbld,2rem,$color-green);
+    @include font($sfpbld,2rem,$color-green);
     background-color: rgba($color-green,.3);
 
     &:hover{
@@ -9,7 +9,7 @@
 }
 
 .weddingLink{
-    @include font($rbbld,2rem,$color-pink-light);
+    @include font($sfpbld,2rem,$color-pink-light);
     background-color: rgba($color-pink-light,.3);
 
     &:hover{
@@ -19,7 +19,7 @@
 }
 
 .eventLink{
-    @include font($rbbld,2rem,$color-yellow-light);
+    @include font($sfpbld,2rem,$color-yellow-light);
     background-color: rgba($color-yellow-light,.3);
 
     &:hover{
@@ -29,7 +29,7 @@
 }
 
 .engagamentLink{
-    @include font($rbbld,2rem,$color-purple);
+    @include font($sfpbld,2rem,$color-purple);
     background-color: rgba($color-purple,.3);
 
     &:hover{

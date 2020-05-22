@@ -2,15 +2,23 @@
     padding: 5rem 20rem;
     position: relative;
     overflow: hidden;
-    height: 100rem;
+    height: 120rem;
+
+    @include respondmax(xxl){
+        height: 98rem;     
+    }
 
     @include respondmax(sm) {
         padding: 1.5rem 2rem;
         height: 78rem;
     }
     &__title {
-        @include font($rbmdm, 4.8rem, $color-grey-dark);
+        @include font($sfpbld, 4.8rem, $color-grey-dark);
         text-align: center;
+
+        @include respondmax(xxl){
+           font-size: 3.6rem;
+        }
 
         @include respondmax(sm) {
             text-align: start;
@@ -27,13 +35,19 @@
         position: absolute;
         background-image: url("../../img/pricingback.png");
         opacity: 0.11;
-        width: 80rem;
-        height: 76rem;
+        width: 120rem;
+        height: 116rem;
         left: -5rem;
         top: 3rem;
         background-color: rgba($color-yellow-light, 0.1);
         z-index: 1;
-        background-size: contain;
+        background-size: cover;
+
+        @include respondmax(xxl){
+           width: 92rem;
+           height: 88rem;
+           left: -1rem;
+        }
 
         @include respondmax(sm) {
             width: 100%;

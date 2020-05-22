@@ -34,4 +34,22 @@ $(document).ready(function () {
         autoplayHoverPause: true
 
     });
+
+
+});
+
+$(document).ready(function () {
+    $('.pagesCarousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        autoplay: true,
+        nav: false,
+        dots: false,
+        items: 1,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        //smartSpeed:1350,
+        autoplayTimeout: 3000,
+        
+    });
 });

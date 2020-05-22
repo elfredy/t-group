@@ -1,4 +1,4 @@
-.header{
+.header {
     height: 10rem;
     width: 56%;
     padding: 3rem 5rem 3rem 10rem;
@@ -7,29 +7,78 @@
     left: 0;
     z-index: 10;
 
-    @include respondmax(xl){
+    @include respondmax(xxl){
+        padding: 3rem 4rem 3rem 8.5rem;
+    }
+
+    @include respondmax(xl) {
         width: 65%;
         padding: 3rem 4rem 3rem 8.5rem;
     }
-    
-    @include respondmax(lg){
-       width: 60%;
+
+    @include respondmax(lg) {
+        width: 60%;
         padding: 1rem;
     }
 
-    @include respondmax(md){
+    @include respondmax(md) {
         width: 100%;
         padding: 1.5rem 2.5rem 1.5rem 5rem;
     }
 
-    @include respondmax(sm){
+    @include respondmax(sm) {
         padding: 1.5rem 2.5rem 1.5rem 3.5rem;
     }
 
+    .navbar-brand {
+        width: 12.2rem;
+        height: 11.9rem;
 
-    .navbar-brand{
-        @include respondmax(lg){
+        @include respondmax(xxl){
+            width: 9.2rem;
+            height: 9.9rem;
+        }
+
+        @include respondmax(lg) {
             width: 8rem;
         }
+    }
+
+
+}
+
+.langDropdown {
+    position: relative;
+    cursor: pointer;
+    .collapsing,
+    .show {
+        position: absolute !important;
+    }
+
+    &__firstLink {
+        &:after {
+            content: "\f077";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 0.7rem;
+            transition: all 0.3s;
+            transform: rotate(180deg);
+            display: inline-block;
+            position: absolute;
+            font-size: 11px;
+            top: .8rem;
+        }
+    }
+}
+
+.openMenu {
+    &:after {
+        content: "\f077";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-left: 1rem;
+        transition: all 0.3s;
+        transform: rotate(0);
+        display: inline-block;
     }
 }

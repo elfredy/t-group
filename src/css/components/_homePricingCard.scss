@@ -1,14 +1,31 @@
 .homePricingCard{
     display: block;
-    width: 30rem;
-    height: 58rem;
+    width: 42rem;
+    height: 82rem;
     margin: 0 auto;
     position: relative;
     box-shadow: 0 0 2rem -5px rgba($color-shadow, 0.2);
     border-radius: .5rem;
-    border-top: 6px solid $color-green;
+    background-color: $color-white;
     transition: all .3s;
     z-index: 2;
+
+    @include respondmax(xxl){
+       width: 26rem;
+       height: 60rem;
+    }
+
+    &--1{
+        border-top: 6px solid $color-green;
+    }
+
+    &--2{
+        border-top: 6px solid $color-yellow-light;
+    }
+
+    &--3{
+        border-top: 6px solid $color-purple;
+    }
 
     @include respondmax(sm){
         width: 100%;
@@ -20,22 +37,35 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 17rem;
+        height: calc(100% / 3);
         text-align: center;
-        border-bottom: 1px solid rgba($color-grey-light,.6);
+        border-bottom: 1px solid rgba($color-grey-dark,.6);
+
+        @include respondmax(xxl){
+            height: calc(100% / 3.5);
+        }
         
         & span{
-            @include font($rbrgl,1.2rem,rgba($color-grey-dark,.4));
+            @include font($sfprgl,1.6rem,rgba($color-grey-dark,.4));
             display: block;
             text-align: center;
+            margin-top: 3rem;         
+            
+            @include respondmax(xxl){
+               margin-top: 2rem;
+            }
         }
     }
     
 
     &__number1{
-        @include font($rbmdm,5rem,$color-pink-light);
+        @include font($sfpmd,6.9rem,$color-pink-light);
         display: inline-block;
         margin-top: 5rem;
+
+        @include respondmax(xxl){
+            font-size: 4.5rem;
+        }
 
         @include respondmax(sm){
             font-size: 4.6rem;
@@ -43,8 +73,12 @@
 
     }
     &__number2{
-        @include font($rbmdm,1.8rem,$color-pink-light);
+        @include font($sfpmd,2.5rem,$color-pink-light);
         display: inline-block;
+
+        @include respondmax(xxl){
+          font-size: 2rem;
+        }
 
         @include respondmax(sm){
             font-size: 1.5rem;
@@ -55,25 +89,35 @@
         position: absolute;
         width: 100%;
         left: 0;
-        top: 17rem;
+        top: 50%;
+        transform: translateY(-50%);
         text-align: center;
-        border-bottom: 1px solid rgba($color-grey-light,.6);
+       
         & p{
-            @include font($rbrgl,1.4rem,rgba($color-grey-dark,.7));
-            max-width: 17.8rem;
-            max-height: 2rem;
+            @include font($sfprgl,2rem,rgba($color-grey-dark,.7));
+            max-width: 25.8rem;
+            max-height: 3rem;
             overflow: hidden;
-            margin: 1.2rem auto;
+            margin: 2rem auto;
+
+            @include respondmax(xxl){
+                font-size: 1.6rem;
+            }
 
         }
     }
     &__title{
-        @include font($rbrgl,2rem,$color-grey-dark);
+        @include font($sfprgl,2.8rem,$color-grey-dark);
         text-decoration: underline;
         margin-top: 4rem;
+
+        @include respondmax(xxl){
+          font-size: 2rem;
+        }
     }
 
     &__bottom{
+        border-top: 1px solid rgba($color-grey-dark,.6);
         position: absolute;
         left: 0;
         bottom: 0;
@@ -81,21 +125,41 @@
         height: 17rem;
 
         & span{
-            @include font($rbrgl,1.2rem,rgba($color-grey-dark,.4));
+            @include font($sfprgl,2rem,rgba($color-grey-dark,.4));
             display: block;
             text-align: center;
+
+            @include respondmax(xxl){
+                font-size: 1.6rem;
+            }
         }
     }
 
     &__fakeButton{
-        @include font($rbbld,2rem,rgba($color-grey-dark,.5));
+        @include font($sfpbld,2.4rem,rgba($color-grey-dark,.5));
         text-align: center;
         border: 1px solid rgba($color-grey-dark,.5);
         border-radius: .6rem;
-        width: 24rem;
+        width: 33rem;
         margin: 2rem auto;
-        padding: 1.2rem 0;
+        height: 6.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         transition: all .3s;
+
+        @include respondmax(xxl){
+          width: 21rem;
+          font-size: 1.6rem;
+          height: 5rem;
+        }
+
+        &:hover{
+            color: $color-white;
+            background-color: $color-green;
+            border-color: $color-green;
+        }
     }
 
     &:hover{
@@ -103,11 +167,7 @@
         transform: translateY(-8px);
         box-shadow: 0 1rem 2rem 5px rgba($color-shadow,.2);
 
-        & .homePricingCard__fakeButton{
-            color: $color-white;
-            background-color: $color-green;
-            border-color: $color-green;
-        }
+       
 
     }
 
